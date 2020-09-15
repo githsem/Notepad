@@ -25,12 +25,12 @@ class Menu(QMainWindow):
         dosya.addAction(cikis)
 
         ara_ve_degistir = duzenle.addMenu("Ara ve Degistir")
-        ara = QAction("Ara",self)
-        degistir = QAction("Duzenle",self)
+        ara = QAction("Ara", self)
+        degistir = QAction("Duzenle", self)
         ara_ve_degistir.addAction(ara)
         ara_ve_degistir.addAction(degistir)
 
-        temizle =QAction("Temizle",self)
+        temizle =QAction("Temizle", self)
         duzenle.addAction(temizle)
 
         cikis.triggered.connect(self.cikis_yap)
