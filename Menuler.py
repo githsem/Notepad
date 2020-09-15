@@ -45,7 +45,8 @@ class Menu(QMainWindow):
             print("Dosya Acildi...")
         elif action.text() == "Dosya Kaydet":
             print("Dosya Kaydedildi...")
-        
+        elif action.text() == "Cikis":
+            print("Dosyadan Cikildi...")
 
 app = QApplication(sys.argv)
 menu = Menu()
