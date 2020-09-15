@@ -42,6 +42,7 @@ class Menu(QMainWindow):
 
     def cikis_yap(self):
         qApp.quit()
+        
     def response(self,action):
         if action.text() == "Dosya Ac":
             print("Dosya Acildi...")
