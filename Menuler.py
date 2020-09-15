@@ -33,12 +33,16 @@ class Menu(QMainWindow):
         duzenle.addAction(temizle)
 
         cikis.triggered.connect(self.cikis_yap)
+        dosya.triggered.connect(self.response)
 
         self.setWindowTitle("Menuler")
 
         self.show()
     def cikis_yap(self):
         qApp.quit()
+    def response(self,action):
+        if action.text() == "Dosya Ac"
+            print("Dosya Acildi...")
 
 app = QApplication(sys.argv)
 menu = Menu()
