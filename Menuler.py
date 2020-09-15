@@ -29,6 +29,9 @@ class Menu(QMainWindow):
         ara_ve_degistir.addAction(ara)
         ara_ve_degistir.addAction(degistir)
 
+        temizle =QAction("Temizle",self)
+        duzenle.addAction(temizle)
+
 
 
         self.setWindowTitle("Menuler")
