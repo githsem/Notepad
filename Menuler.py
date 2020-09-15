@@ -11,7 +11,15 @@ class Menu(QMainWindow):
         duzenle = menubar.addMenu("Duzenle")
 
         dosya_ac = QAction("Dosya Ac",self)
-        
+        dosya_ac.setShortcut("Ctrl+O")
+
+        dosya_kaydet = QAction("Dosya Kaydet",self)
+        dosya_kaydet.setShortcut("Ctrl+S")
+
+        cikis = QAction("Cikis",self)
+        cikis.setShortcut("Ctrl+Q")
+
+
 
         self.setWindowTitle("Menuler")
 
