@@ -30,7 +30,7 @@ class Menu(QMainWindow):
         ara_ve_degistir.addAction(ara)
         ara_ve_degistir.addAction(degistir)
 
-        temizle =QAction("Temizle", self)
+        temizle = QAction("Temizle", self)
         duzenle.addAction(temizle)
 
         cikis.triggered.connect(self.cikis_yap)
