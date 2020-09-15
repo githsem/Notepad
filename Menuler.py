@@ -32,12 +32,13 @@ class Menu(QMainWindow):
         temizle =QAction("Temizle",self)
         duzenle.addAction(temizle)
 
-
+        cikis.triggered.connect(self.cikis_yap)
 
         self.setWindowTitle("Menuler")
 
         self.show()
-
+    def cikis_yap(self):
+        qApp.quit()
 
 app = QApplication(sys.argv)
 menu = Menu()
