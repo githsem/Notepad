@@ -23,6 +23,9 @@ class Menu(QMainWindow):
         dosya.addAction(dosya_kaydet)
         dosya.addAction(cikis)
 
+        ara_ve_degistir = duzenle.addMenu("Ara ve Degistir")
+        
+
 
 
         self.setWindowTitle("Menuler")
