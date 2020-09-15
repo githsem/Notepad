@@ -1,6 +1,6 @@
 import sys
 
-from  PyQt5.QtWidgets import QApplication, QAction, qApp, QMainWindow
+from PyQt5.QtWidgets import QApplication, QAction, qApp, QMainWindow
 
 class Menu(QMainWindow):
     def __init__(self):
