@@ -51,6 +51,7 @@ class Menu(QMainWindow):
         elif action.text() == "Cikis":
             print("Dosyadan Cikildi...")
 
+
 app = QApplication(sys.argv)
 menu = Menu()
 sys.exit(app.exec_())
