@@ -10,7 +10,8 @@ class Menu(QMainWindow):
         dosya = menubar.addMenu("Dosya")
         duzenle = menubar.addMenu("Duzenle")
 
-        dosya_ac = QAction
+        dosya_ac = QAction("Dosya Ac",self)
+        
 
         self.setWindowTitle("Menuler")
 
