@@ -19,6 +19,10 @@ class Menu(QMainWindow):
         cikis = QAction("Cikis",self)
         cikis.setShortcut("Ctrl+Q")
 
+        dosya.addAction(dosya_ac)
+        dosya.addAction(dosya_kaydet)
+        dosya.addAction(cikis)
+
 
 
         self.setWindowTitle("Menuler")
