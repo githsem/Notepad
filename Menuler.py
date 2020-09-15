@@ -39,6 +39,7 @@ class Menu(QMainWindow):
         self.setWindowTitle("Menuler")
 
         self.show()
+
     def cikis_yap(self):
         qApp.quit()
     def response(self,action):
