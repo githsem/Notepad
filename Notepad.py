@@ -3,7 +3,7 @@ import os
 
 
 from PyQt5.QtWidgets import QWidget, QApplication, QTextEdit, QRadioButton, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog
-
+from PyQt5.QtWidgets import QApplication, QAction, qApp, QMainWindow
 
 class Notepad(QWidget):
     def __init__(self):
