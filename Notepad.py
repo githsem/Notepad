@@ -49,6 +49,21 @@ class Menu(QMainWindow):
 
         self.pencere = Notepad()
         self.setCentralWidget(self.pencere)
+        self.menuleri_olustur()
+
+    def menuleri_olustur(self):
+        menubar = self.menuBar()
+        dosya = menubar.addMenu("Dosya")
+
+        dosya_ac = QAction("Dosya Ac",self)
+        dosya_ac.setShortcut("Ctrl+O")
+        dosya_kaydet = QAction("Dosya Kaydet",self)
+        dosya_kaydet.setShortcut("Ctrl+S")
+        temizle = QAction("Temizle",self)
+        temizle.setShortcut("Ctrl+D")
+        cikis = QAction("Cikis",self)
+        cikis.setShortcut("Ctrl+Q")
+
         self.setWindowTitle("Metin Editoru")
         self.show()
 
