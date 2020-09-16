@@ -5,6 +5,7 @@ import os
 from PyQt5.QtWidgets import QWidget, QApplication, QTextEdit, QRadioButton, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog
 from PyQt5.QtWidgets import QApplication, QAction, qApp, QMainWindow
 
+
 class Notepad(QWidget):
     def __init__(self):
         super().__init__()
@@ -43,6 +44,8 @@ class Notepad(QWidget):
         dosya_ismi = QFileDialog.getSaveFileName(self, "Dosya Kaydet", os.getenv("HOME"))
         with open(dosya_ismi[0], "w") as file:
             file.write(self.yazi_alani.toPlainText())
+
+
 class Menu(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -55,20 +58,34 @@ class Menu(QMainWindow):
         menubar = self.menuBar()
         dosya = menubar.addMenu("Dosya")
 
-        dosya_ac = QAction("Dosya Ac",self)
+        dosya_ac = QAction("Dosya Ac", self)
         dosya_ac.setShortcut("Ctrl+O")
-        dosya_kaydet = QAction("Dosya Kaydet",self)
+        dosya_kaydet = QAction("Dosya Kaydet", self)
         dosya_kaydet.setShortcut("Ctrl+S")
-        temizle = QAction("Temizle",self)
+        temizle = QAction("Temizle", self)
         temizle.setShortcut("Ctrl+D")
-        cikis = QAction("Cikis",self)
+        cikis = QAction("Cikis", self)
         cikis.setShortcut("Ctrl+Q")
+
+        dosya.addAction(dosya_ac)
+        dosya.addAction(dosya_kaydet)
+        dosya.addAction(temizle)
+        dosya.addAction(cikis)
+
+        dosya.triggered.connect(self.response)
 
         self.setWindowTitle("Metin Editoru")
         self.show()
 
-
-
+    def response(self, action):
+        if action.text() == "Dosya Ac":
+            self.pencere.dosya_ac()
+        elif action.text() == "Dosya Kaydet":
+            self.pencere.dosya_kaydet()
+        elif action.text() == "Temizle":
+            self.pencere.yaziyi_temizle()
+        elif action.text() == "Cikis":
+            qApp.quit()
 
 
 app = QApplication(sys.argv)
