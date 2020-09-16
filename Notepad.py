@@ -44,7 +44,7 @@ class Notepad(QWidget):
         dosya_ismi = QFileDialog.getSaveFileName(self, "Dosya Kaydet", os.getenv("HOME"))
         with open(dosya_ismi[0], "w") as file:
             file.write(self.yazi_alani.toPlainText())
-
+class Menu()
 
 app = QApplication(sys.argv)
 notepad = Notepad()
