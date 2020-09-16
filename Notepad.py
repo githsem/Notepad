@@ -44,8 +44,19 @@ class Notepad(QWidget):
         dosya_ismi = QFileDialog.getSaveFileName(self, "Dosya Kaydet", os.getenv("HOME"))
         with open(dosya_ismi[0], "w") as file:
             file.write(self.yazi_alani.toPlainText())
-class Menu()
+class Menu(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.pencere = Notepad()
+        self.setCentralWidget(self.pencere)
+        self.setWindowTitle("Metin Editoru")
+        self.show()
+
+
+
+
 
 app = QApplication(sys.argv)
-notepad = Notepad()
+menu = Menu()
 sys.exit(app.exec_())
